@@ -310,8 +310,8 @@ function wjc_display_book($content) {
     $book .= '<div class="book">';
     $book .= '<div class="book-page"><p><strong>Title:</strong><em> '. genesis_get_custom_field( '_cmb_wjc_book_title' ) .'</strong></em></br>';
     $book .= '<strong>Author: </strong><em>'. genesis_get_custom_field( '_cmb_wjc_book_author' ) .'</em></br>';
-    $book .= '<strong>Amazon Link: </strong><em>'. genesis_get_custom_field( '_cmb_wjc_book_website' ) .'</em></p>';
-    $book .= '<p><strong>Summary:</strong><em> '. genesis_get_custom_field( '_cmb_wjc_book_summary' ) .'</em></p></div>';
+    $book .= '<strong>Amazon Link: </strong><em>'. genesis_get_custom_field( '_cmb_wjc_book_website' ) .'</em></br>';
+    $book .= '<strong>Summary:</strong><em> '. genesis_get_custom_field( '_cmb_wjc_book_summary' ) .'</em></div>';
     $book .= '<div class="book-page2"><img class="alignright" src="'. genesis_get_custom_field( '_cmb_wjc_book_image' ) .'" /></div>';
     $book .= '</div>';
     
