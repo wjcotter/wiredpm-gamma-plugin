@@ -296,57 +296,30 @@ function mcr_list_items($type = 'ingredients') {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Create Book Review CPT Functionality
  * @since 1.0.0
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
-
-
+ */
 function wjc_display_book($content) {
  
     global $post;
     $book = '';
  
-    if ( is_singular( 'wjc_book_reviews' ) ) {
-        $book .= '<div class="book">';
-            $book .= '<div itemscope itemtype="http://schema.org/Book" >';
-                $book .= '<h2 itemprop="name">'. genesis_get_custom_field($post->ID,'wjc_title',true) .'</h2>';
-                $book .= '<img class="alignright" itemprop="image" src="'. genesis_get_custom_field($post->ID,'wjc_image',true) .'" />';
-                $book .= '</br>';
-                $book .= '<hr />';
-                $book .= '<span itemprop="author">'. genesis_get_custom_field($post->ID,'wjc_author',true) .'</span><br />';
-				$book .= '<span itemprop="publisher">'. genesis_get_custom_field($post->ID,'wjc_publisher',true) .'</span><br />';
-				$book .= '<span itemprop="link">'. genesis_get_custom_field($post->ID,'wjc_link',true) .'</span><br />';
-                
-            $book .= '</div>';
-        $book .= '</div>';
+    if ( is_singular( 'book_review' ) ) {
+    $book .= '<div class="book">';
+    $book .= '<div class="book-page"><p><strong>Title:</strong><em> '. genesis_get_custom_field( '_cmb_wjc_book_title' ) .'</strong></em></br>';
+    $book .= '<strong>Author: </strong><em>'. genesis_get_custom_field( '_cmb_wjc_book_author' ) .'</em></br>';
+    $book .= '<strong>Amazon Link: </strong><em>'. genesis_get_custom_field( '_cmb_wjc_book_website' ) .'</em></p>';
+    $book .= '<p><strong>Summary:</strong><em> '. genesis_get_custom_field( '_cmb_wjc_book_summary' ) .'</em></p></div>';
+    $book .= '<div class="book-page2"><img class="alignright" src="'. genesis_get_custom_field( '_cmb_wjc_book_image' ) .'" /></div>';
+    $book .= '</div>';
+    
     }
  
     return $content . $book;
 }
 add_filter('the_content', 'wjc_display_book', 1);
-
-
-*/
-
-
-
-
-
-
-
-
 
 
 
