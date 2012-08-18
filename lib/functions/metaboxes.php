@@ -42,7 +42,7 @@ function wjc_sample_metaboxes( array $meta_boxes ) {
 	$meta_boxes[] = array(
 		'id'         => 'book-review',
 		'title'      => 'Book Review Metabox',
-		'pages'      => array( 'page', 'book_review' ), // Post type
+		'pages'      => array('book_review' ), // Post type
 		'context'    => 'normal',
 		'priority'   => 'high',
 		'show_names' => true, // Show field names on the left
